@@ -18,7 +18,7 @@ A clean and responsive React app that fetches and displays a list of users from 
 
 ## 🧩 Preview
 
-![Preview](preview.png)
+![Preview](./public/preview.png)
 
 ---
 
@@ -37,7 +37,7 @@ vite.config.js
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/fetch-list-app.git
+git clone https://github.com/oreoluwa212/fetch-list-app
 cd fetch-list-app
 
 # Install dependencies

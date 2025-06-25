@@ -69,12 +69,7 @@ function App() {
       <ToastContainer
         position="top-right"
         autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop
-        closeOnClick
-        pauseOnHover
-        draggable
-        theme="colored"
+        theme="dark" // use 'colored' if you want vibrancy instead
       />
     </main>
   );
