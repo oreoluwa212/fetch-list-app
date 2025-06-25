@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden; /* 💥 Prevent horizontal scroll */
 }
@@ -82,23 +83,36 @@ body {
 
 /* User Content */
 .user-card-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 16px;
   width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.user-card-content h2,
+.user-card-content p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .user-card-content h2 {
-  margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.3;
 }
 
 .user-card-content p {
-  margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #cbd5e1;
+}
+
+.user-info {
+  overflow: hidden;
 }
 
 /* Avatar */
@@ -107,12 +121,13 @@ body {
   color: #0f172a;
   font-weight: bold;
   border-radius: 9999px;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 /* CTA Button */
@@ -125,7 +140,10 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
+
 .action-button:hover {
   background: #4ade80;
 }
